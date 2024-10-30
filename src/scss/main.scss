@@ -57,5 +57,121 @@ video {
 }
 
 // ---------------------------------------------
-// Votre code ici :
+.wrapper-hover {
+  .item:hover {
+    background: var(--pink);
+  }
+}
+.wrapper-transition {
+  .item {
+    transition-duration: 0.5s;
+  }
+  .item:hover {
+    background: var(--pink);
+  }
+}
+.wrapper-delay {
+  .item {
+    transition-delay: 0.5s;
+    transition-duration: 0.5s;
+  }
+  .item:hover {
+    background: var(--pink);
+  }
+}
+.wrapper-two-properties {
+  .item {
+    transition-duration: 0.5s;
+  }
+  .item:hover {
+    background: var(--pink);
+    color: black;
+  }
+}
+.wrapper-delay-one-property {
+  .item {
+    transition: color 0.5s 0.5s, background-color 0.5s;
+  }
+  .item:hover {
+    background: var(--pink);
+    color: black;
+  }
+}
+.wrapper-parent .item {
+  transition-duration: 0.5s;
+}
+.wrapper-parent:hover {
+  .item {
+    background: var(--pink);
+  }
+}
+.wrapper-parent-delay {
+  .item {
+    transition-duration: 0.5s;
+  }
+  .item:nth-child(2) {
+    transition-delay: 0.7s;
+  }
+  .item:nth-child(3) {
+    transition-delay: 1.4s;
+  }
+}
+.wrapper-parent-delay:hover {
+  .item:nth-child(1) {
+    background: var(--pink);
+  }
+  .item:nth-child(2) {
+    background: var(--pink);
+  }
+  .item:nth-child(3) {
+    background: var(--pink);
+  }
+}
+.wrapper-parent-children {
+  transition-duration: 0.5s;
+}
+.wrapper-parent-children:hover {
+  background: var(--blue);
+  .item {
+    background: var(--pink);
+  }
+}
+
+.wrapper-parent-children-delay {
+  transition-duration: 0.5s;
+  .item {
+    transition-delay: 0.5s;
+    transition-duration: 0.5s;
+  }
+}
+.wrapper-parent-children-delay:hover {
+  background: var(--blue);
+  .item {
+    background: var(--pink);
+  }
+}
+.wrapper-translate {
+  .item {
+    transition-duration: 0.5s;
+  }
+  .item:hover {
+    transform: translateY(20px);
+  }
+}
+.wrapper-rotate {
+  .item {
+    transition-duration: 0.5s;
+  }
+  .item:hover {
+    transform: rotate(90deg);
+  }
+}
+.wrapper-scale {
+  .item {
+    transition-duration: 0.5s;
+  }
+  .item:hover {
+    transform: scale(120%);
+  }
+}
 // ---------------------------------------------
